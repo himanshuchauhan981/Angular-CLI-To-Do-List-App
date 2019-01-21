@@ -1,0 +1,31 @@
+.text-heading{
+  margin: 0 auto;
+  font-family: Helvetica;
+  font-size:28px;
+  color:white;
+}
+nav{
+  background-color: orangered;
+}
+.edit_container1{
+  margin-top:40px;
+}
+body{
+  background-color: grey;
+}
+
+.edit_container2{
+  margin-top: 50px;
+  width: 700px;
+  overflow: hidden;
+}
+
+.text{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap ;
+  display: block;
+}
+.btn{
+  float: right;
+}
