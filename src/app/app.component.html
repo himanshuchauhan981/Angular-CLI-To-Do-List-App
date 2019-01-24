@@ -2,13 +2,13 @@
   <a class="navbar-brand text-heading" href="#">To-do List</a>
 </nav>
 <div class="container edit_container1">
-  <form #getTodoData="ngForm" (ngSubmit)="getData(getTodoData)">
+  <form #userForm = "ngForm" (ngSubmit)="onSubmit()" novalidate>
     <div class="row">
       <div class="col-md-11">
-        <input type="text" class="form-control" name="work" placeholder="Enter ToDo Work" ngModel>
+        <input type="text" class="form-control" name="userData" [(ngModel)]="userModel.userData">
       </div>
       <div class="col-md-1">
-        <button type="button" class="btn btn-md btn-block btn-success">Add</button>
+        <button type="submit" class="btn btn-md btn-block btn-success">Add</button>
       </div>
     </div>
   </form>
