@@ -18,8 +18,12 @@ app.post('/api/storingData',function(request,response){
     data = {userData: request.body.userData};
     var model = new datamodel(data);
     model.save();
+});
 
-
+app.get('/api/showData',function(request,response){
+    datamodel.find({},function(err,data){
+        return response.json({data});
+    });
 });
 
 app.listen(1234,function(){
