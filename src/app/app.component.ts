@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { User } from './user';
 import {ServiceService} from './service.service';
 
@@ -8,10 +8,15 @@ import {ServiceService} from './service.service';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {
+export class AppComponent implements  OnInit{
    constructor(private _auth: ServiceService) {}
    userModel = new User('Enter your Data');
+   postdata: any
+
+   ngOnInit(){
+       this._auth.showFunction().subscribe(res => this.postdata = res.data);
+   }
    onSubmit() {
-      this._auth.postFunction(this.userModel).subscribe(res => console.log(res));
-  }
+       this._auth.postFunction(this.userModel).subscribe(res => console.log(res));
+   }
 }
