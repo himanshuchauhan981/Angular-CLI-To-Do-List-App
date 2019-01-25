@@ -8,4 +8,7 @@ export class ServiceService {
    postFunction = function(userData) {
        return this.http.post('/api/storingData', userData);
    };
+   showFunction = function() {
+       return this.http.get('/api/showData');
+   };
 }
