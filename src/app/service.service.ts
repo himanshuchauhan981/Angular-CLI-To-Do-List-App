@@ -11,4 +11,7 @@ export class ServiceService {
    showFunction = function() {
        return this.http.get('/api/showData');
    };
+   deleteFunction = function(data){
+      return this.http.post('/api/deleteData/'+data);
+   }
 }
