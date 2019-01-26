@@ -8,7 +8,7 @@
                 <input type="text" class="form-control" name="userData" [(ngModel)]="userModel.userData">
             </div>
             <div class="col-md-1">
-                <button type="submit" class="btn btn-md btn-block btn-success">Add</button>
+               <button type="submit" class="btn btn-md btn-block btn-success">Add</button>
             </div>
         </div>
     </form>
@@ -20,7 +20,7 @@
             <div class="text">{{user.userData}}</div>
          </div>
          <div class="col-md-2">
-            <button class="btn btn-success">Remove</button>
+            <button class="btn btn-success" (click)="delete_data(user.userData)">Remove</button>
          </div>
     </div>
 </div>
